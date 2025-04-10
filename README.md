@@ -1,2 +1,15 @@
-# cookies-exprexx
-🚀 My very first Replit project — a cookie delivery landing page using HTML, CSS, and JavaScript!
+# 🍪 Cookies Exprexx
+
+This is my **first-ever Replit project**!  
+Built using HTML, CSS, and JavaScript on Replit.
+
+✅ Responsive form  
+✅ Font Awesome icons  
+✅ Animations + cookie image  
+✅ localStorage to remember form data
+
+Hosted and live via Replit 💻
+
+---
+
+Made with ❤ by Adina Fakih
