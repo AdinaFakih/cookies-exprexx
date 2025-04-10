@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const deliveryForm = document.getElementById('deliveryForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
     const addressInput = document.getElementById('address');
     const landmarkInput = document.getElementById('landmark');
     const instructionsInput = document.getElementById('instructions');
@@ -7,10 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to load saved data from localStorage
     function loadSavedData() {
+        const savedName = localStorage.getItem('cookies_express_name');
+        const savedEmail = localStorage.getItem('cookies_express_email');
+        const savedPhone = localStorage.getItem('cookies_express_phone');
         const savedAddress = localStorage.getItem('cookies_express_address');
         const savedLandmark = localStorage.getItem('cookies_express_landmark');
         const savedInstructions = localStorage.getItem('cookies_express_instructions');
         
+        if (savedName) nameInput.value = savedName;
+        if (savedEmail) emailInput.value = savedEmail;
+        if (savedPhone) phoneInput.value = savedPhone;
         if (savedAddress) addressInput.value = savedAddress;
         if (savedLandmark) landmarkInput.value = savedLandmark;
         if (savedInstructions) instructionsInput.value = savedInstructions;
@@ -24,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         
         // Save data to localStorage
+        localStorage.setItem('cookies_express_name', nameInput.value);
+        localStorage.setItem('cookies_express_email', emailInput.value);
+        localStorage.setItem('cookies_express_phone', phoneInput.value);
         localStorage.setItem('cookies_express_address', addressInput.value);
         localStorage.setItem('cookies_express_landmark', landmarkInput.value);
         localStorage.setItem('cookies_express_instructions', instructionsInput.value);
@@ -35,11 +47,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Delete saved information
     deleteButton.addEventListener('click', function() {
         // Clear localStorage
+        localStorage.removeItem('cookies_express_name');
+        localStorage.removeItem('cookies_express_email');
+        localStorage.removeItem('cookies_express_phone');
         localStorage.removeItem('cookies_express_address');
         localStorage.removeItem('cookies_express_landmark');
         localStorage.removeItem('cookies_express_instructions');
         
         // Clear form fields
+        nameInput.value = '';
+        emailInput.value = '';
+        phoneInput.value = '';
         addressInput.value = '';
         landmarkInput.value = '';
         instructionsInput.value = '';
