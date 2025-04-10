@@ -256,6 +256,72 @@ textarea:focus {
     }
 }
 
+/* Saved Data Display Styling */
+.stored-data-container {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+}
+
+.saved-data-list {
+    margin-top: 15px;
+}
+
+.data-entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.data-entry:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-entry h4 {
+    color: var(--gold-accent);
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.data-entry p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.data-entry p strong {
+    color: var(--gray);
+    display: inline-block;
+    width: 100px;
+}
+
+.data-entry .delete-entry {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: var(--red);
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.data-entry .delete-entry:hover {
+    color: #ff6666;
+}
+
+.empty-data-message {
+    text-align: center;
+    color: var(--gray);
+    font-style: italic;
+    padding: 20px;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 992px) {
     .sidebar {
